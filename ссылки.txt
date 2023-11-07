@@ -1,0 +1,73 @@
+Теория к практике:
+я
+Хорошее видео о том как происходит спуск по уровням абстракции при развитии программиста:
+https://youtu.be/uOa7XtkK1vQ?si=7PWCnEqCH1VYa-jS
+я
+Офигенное видео о том какие книги нужно прочитать чтобы стать продвинутым хакером в хорошем понимании этого слова (в принципе автор хороший я его у вас в тг канелеле даже находил его видео):
+https://youtu.be/7ijMUXRtnZQ?si=H1BARyL6kubrPFKf
+не я
+Достаточно хорошо скомпанованная теория по REST API с понятным объяснением, ещё автор показывает то как проиходит взаимодействие клиента и сервера:
+https://youtu.be/mkpJIZWQlHY?si=dssxs9SL32oQ06pI
+я
+К этом очень понятный курс по базе Django (я по нему учился):
+https://youtube.com/playlist?list=PLM7_-YH4Xx6cPMagFDj0tnvLxsqeTHvZ6&si=w_2SLPNPqDMxhhu9
+не я
+21 книга по изычению продвинутого парсинга с снатациями:
+https://vc.ru/books/139845-21-kniga-dlya-samostoyatelnogo-izucheniya-parsinga
++ пример кода для парсинга кинопоиска:
+https://github.com/pensnarik/kinopoisk
+
+И забыл хороший ролик по docker: 
+https://youtu.be/Q7oJejjY_Rs?si=_so68zen4HIqTegx
+я хотел бы на нём попробовать сделать кросплатформенный виджет расписания, но как по мне это сложно в том что я не писал раньше кросплатформенного кода и я по ка буду использовать для андроид Android studio, а для винды Rainmeter (возможно сделаю проект на Visual studio? но на ней у меня проблемы с ноутом)
+не я
+Как красиво нарисовать домашку по матану при помощи Python и Plotly:
+https://habr.com/ru/articles/502958/
+я
+Отличная среда для программирования ИИ и для анализа данных:
+https://youtu.be/bfCfBuIhlB8?si=eGRLYIfVR51BFYz3
+не я
+СЕРИЯ НАУЧНО-ПОПУЛЯРНЫХ ВЕБИНАРОВ «RUCODE. ИСКУССТВЕННЫЙ ИНТЕЛЛЕКТ И ЕГО ПРИМЕНЕНИЕ»(смотрел понравилось но они это более поверхностно рассказывают):
+https://rucode.net/webinars?utm_source=bsvii&utm_medium=email&utm_campaign=rucode2023webinars&utm_content=20230601_anons_button
+не я
+Понятное объяснение решения задачи классификации Ирисов Фишера, с разжовыванием математики:
+https://habr.com/ru/companies/ruvds/articles/679988/
+не я
+Примерное объяснения какие есть задачи в развитии ИИ по типам обрабатываемой информации:
+https://youtu.be/PXI3gwN-Nzc?si=xBaUkkPMCzQJnSZg
+не я
+Про обработку естественного языка:
+https://proglib.io/p/fun-nlp?ysclid=lmlq5t5dat742884510
+я
+Ссылка на кучу нейросетей на гитхаб:
+https://github.com/ai-collection/ai-collection
+
+Ссылка на весь плейлист по философским размышлениям автора, я видел один из роликов у вас в канале, но я посмотрел все эти видео и они показывают как формировать себя как программиста и какие риски в основном со здоровьем есть
+https://youtube.com/playlist?list=PLIJLLSrXDPojDGKW0WZ7sU0eO3nyn0oDc&si=DhLd2BLzKg7sCQF2
+
+Ссылка на плейлист, где автор рассказывает простыми словами как устроен компьютер
+https://www.youtube.com/playlist?list=PLIJLLSrXDPojDGKW0WZ7sU0eO3nyn0oDc
+
+https://youtu.be/U0DzTUX_PoA?t=0&si=3IPNyD_2K8ZWcppG
+Научно популярные ролики:
+всё далее я
+GPT-4 большинство уже учёных признают как первичный общий искусственный интеллект (это доказали тесты на интеллект) 
+https://youtu.be/cf9ek__AH-0?si=oW9vSTGQDmbdSnpM
+
+В дополнение к линейным компьюторам
+https://youtu.be/U0DzTUX_PoA?t=0&si=3IPNyD_2K8ZWcppG
+
+Ролик с подкреплением научных статей про то какие орграничения есть в развитии ИИ (в частности проблема многозадачности), какие новые принципы как электроники (мемристоры и мозгоподобные чипы) так и в архитектуре ИИ:
+https://youtu.be/YxX1sKxi88E?si=rlekmIhzMACO9bHd
+
+Про принцип работы капчи, достаточно поверхностно:
+https://youtu.be/9laiEPEwswU?si=kdRJ1ejqNOVpM7Lg
++ статья на хаборе как её обойти:
+https://habr.com/ru/articles/673440/
+
+Немного по филасовски рассказывает какаво это быть программистом и как развиваться в этом более мнее безопасно для здоровья:
+https://youtu.be/yf51hyd0b6I?si=LIbOKZsH3e30AogB
+
+Просто про то какие есть проблемы с ИИ и способы их решения (как усилить влияние положительных побочних эффектов и ослабить негативные, как обойти эффект взлома вознагрождения):
+https://youtube.com/playlist?list=PL8YZyma552VeTeGYUfnBNhCXvMPggD8yy&si=CgVFEDFXtlLFJJ8Q
+
