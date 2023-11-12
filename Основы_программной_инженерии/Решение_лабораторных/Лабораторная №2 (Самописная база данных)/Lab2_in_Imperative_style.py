@@ -81,10 +81,10 @@ while True:
                         print(f"Место №{name_table} свободно")
 
             elif "освободиь место" in command_in_lowercase:
-                if number_plase in data[0]:
+                if command_splited[2] in data[0]:
                     data[0][command_splited[2]] = None
                 else:
-                    print(f"Место №{number_plase} и так свободно")
+                    print(f"Место №{command_splited[2]} и так свободно")
                     
             elif "занять место" in command_in_lowercase:
                 if command_splited[2] in data[0] and int(command_splited[2]) <= 100:

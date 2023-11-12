@@ -1,8 +1,6 @@
 import json
 from texttable import Texttable
 
-t = Texttable()
-
 
 class JsonDB:
     def __init__(self, sours_on_file):
@@ -29,6 +27,7 @@ class JsonDB:
     # ---------------------------------------------
 
     def all_parking_plases(self):
+        t = Texttable()
         t.add_rows([["место", "машина", "место", "машина", "место", "машина", "место", "машина"]] +
                    [[str(i + 1), self.carpark[str(i + 1)],
                      str(i + 26), self.carpark[str(i + 26)],
@@ -56,6 +55,7 @@ class JsonDB:
             if self.carpark[number_plase] == None:
                 self.carpark[number_plase] = name_care
                 self._to_json()
+                self.all_parking_plases()
             else:
                 print(f"Место №{number_plase} занто {self.carpark[number_plase]}")
 
@@ -63,7 +63,9 @@ class JsonDB:
 
     def add_table(self, name_table):
         if name_table not in vars(self):
+            setattr(self, name_table, {})
             self._to_json()
+            print(f"Успешно создалась {name_table}")
             return ObjectsDB(name_table, getattr(self, name_table))
         else:
             print("Такая таблица уже есть")
@@ -84,7 +86,8 @@ class JsonDB:
     def all_tables(self):
         tables = vars(self).copy()
         del tables["sours_on_file"]
-        return tables.keys()
+        del tables["carpark"]
+        return tables
 
     def find_care(self, parametrs):
         list_fauded_cars = {}
@@ -195,14 +198,17 @@ if __name__ == '__main__':
                     db.add_car_to_carepark(command_splited[2], command_splited[3])
 
                 elif "имена таблиц" in command_in_lowercase:
-                    for name_table in db.all_tables():
-                        print(name_table)
+                    tables = db.all_tables()
+                    for table in tables:
+                        print(table)
+                        for field, value in tables[table].items():
+                            print(f"\t{field} : {value}")
 
                 elif "создать таблицу" in command_in_lowercase:
-                    choice_table = db.add_table(' '.join(command_splited[2:]))
+                    choice_table = db.add_table(command_splited[2])
 
                 elif "удалить таблицу" in command_in_lowercase:
-                    db.delete_table(' '.join(command_splited[2:]))
+                    db.delete_table(command_splited[2:])
 
                 elif "поле" in command_in_lowercase:
                     print("Откройте таблицу!!!")
