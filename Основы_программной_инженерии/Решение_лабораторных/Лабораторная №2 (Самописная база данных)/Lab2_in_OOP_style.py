@@ -208,19 +208,6 @@ if __name__ == '__main__':
                 elif "удалить таблицу" in command_in_lowercase:
                     db.delete_table(command_splited[2:])
 
-                elif "изменить количество мест на" in command_in_lowercase:
-                    carpark = db.change_count_plases_in_carepark(command_splited[4])
-                    if carpark == -1:
-                        print("Вы ввели не корректное количество мест")
-                    else:
-                        t = Texttable()
-                        t.add_rows([["место", "машина", "место", "машина", "место", "машина", "место", "машина"]] +
-                                   [[str(i + 1), carpark[str(i + 1)],
-                                     str(i + 26), carpark[str(i + 26)],
-                                     str(i + 51), carpark[str(i + 51)],
-                                     str(i + 76), carpark[str(i + 76)],
-                                     ] for i in range(25)])
-                        print(t.draw())
 
                 elif "стоянка" in command_in_lowercase:
                     carpark = db.all_parking_plases()
