@@ -1,5 +1,5 @@
 import json
-from texttable import Texttable
+from tabulate import tabulate
 
 
 class JsonDB:
@@ -26,7 +26,6 @@ class JsonDB:
 
     def all_parking_plases(self):
         return self.carpark
-
 
     def free_up_parking_plase(self, number_plase):
         if number_plase in self.all_parking_plases():
@@ -164,11 +163,13 @@ def crete_console_table(title, data):
         if isinstance(data[name_field], list):
             data[name_field] = ", ".join(data[name_field])
 
-    t = Texttable()
-    t.add_rows([[name_field for name_field in data],
-               [str(value) for value in data.values()]])
-    print(t.draw())
-
+    data_1 = []
+    data_1_1 = [name_field for name_field in data]
+    data_1_2 = [str(value) for value in data.values()]
+    data_1.append(data_1_1)
+    data_1.append(data_1_2)
+    table = tabulate(data_1, headers="firstrow", tablefmt="fancy_grid")
+    print(table)
 
 
 if __name__ == '__main__':
@@ -208,23 +209,35 @@ if __name__ == '__main__':
                 elif "удалить таблицу" in command_in_lowercase:
                     db.delete_table(command_splited[2:])
 
-
                 elif "стоянка" in command_in_lowercase:
                     carpark = db.all_parking_plases()
-                    t = Texttable()
-                    t.add_rows([["место", "машина", "место", "машина", "место", "машина", "место", "машина"]] +
-                               [[str(i + 1), carpark[str(i + 1)],
-                                 str(i + 26), carpark[str(i + 26)],
-                                 str(i + 51), carpark[str(i + 51)],
-                                 str(i + 76), carpark[str(i + 76)],
-                                 ] for i in range(25)])
-                    print(t.draw())
+                    datacar = [["Место", "Машина", "Место", "Машина", "Место", "Машина", "Место", "Машина"]]
+                    for i in range(25):
+                        d = []
+                        d1 = str(i + 1)
+                        d.append(d1)
+                        d2 = carpark[str(i + 1)]
+                        d.append(d2)
+                        d3 = str(i + 26)
+                        d.append(d3)
+                        d4 = carpark[str(i + 26)]
+                        d.append(d4)
+                        d5 = str(i + 51)
+                        d.append(d5)
+                        d6 = carpark[str(i + 51)]
+                        d.append(d6)
+                        d7 = str(i + 76)
+                        d.append(d7)
+                        d8 = carpark[str(i + 76)]
+                        d.append(d8)
+                        datacar.append(d)
+                    table = tabulate(datacar, headers="firstrow", tablefmt="fancy_grid")
+                    print(table)
 
-                elif "освободиь место" in command_in_lowercase:
+                elif "освободить место" in command_in_lowercase:
                     plase = db.free_up_parking_plase(command_splited[2])
                     if plase == -1:
                         print(f"Такого места №{command_splited[2]} - нет")
-
 
                 elif "занять место" in command_in_lowercase:
                     plase = db.add_car_to_carepark(command_splited[2], command_splited[3])
@@ -239,18 +252,31 @@ if __name__ == '__main__':
                 elif "изменить место на" in command_in_lowercase:
                     choice_table.change_place(int(command_splited[3]))
                     carpark = db.all_parking_plases()
-                    t = Texttable()
-                    t.add_rows([["место", "машина", "место", "машина", "место", "машина", "место", "машина"]] +
-                               [[str(i + 1), carpark[str(i + 1)],
-                                 str(i + 26), carpark[str(i + 26)],
-                                 str(i + 51), carpark[str(i + 51)],
-                                 str(i + 76), carpark[str(i + 76)],
-                                 ] for i in range(25)])
-                    print(t.draw())
+                    datacar = [["Место", "Машина", "Место", "Машина", "Место", "Машина", "Место", "Машина"]]
+                    for i in range(25):
+                        d = []
+                        d1 = str(i + 1)
+                        d.append(d1)
+                        d2 = carpark[str(i + 1)]
+                        d.append(d2)
+                        d3 = str(i + 26)
+                        d.append(d3)
+                        d4 = carpark[str(i + 26)]
+                        d.append(d4)
+                        d5 = str(i + 51)
+                        d.append(d5)
+                        d6 = carpark[str(i + 51)]
+                        d.append(d6)
+                        d7 = str(i + 76)
+                        d.append(d7)
+                        d8 = carpark[str(i + 76)]
+                        d.append(d8)
+                        datacar.append(d)
+                    table = tabulate(datacar, headers="firstrow", tablefmt="fancy_grid")
+                    print(table)
 
                 elif "поле" in command_in_lowercase:
                     print("Откройте таблицу!!!")
-
 
             elif choice_table != '':
 
@@ -280,7 +306,7 @@ if __name__ == '__main__':
 
             if "помощь" in command_in_lowercase:
                 print(
-'''Комманды:
+                    '''Комманды:
 найти машину по <люые данные которые могут быть у машины через пробел> - выводит список всех машин удовлетворяющих условию
 стоянка - выводит список всех мест на стоянке и занимаемых ими местах
 освободиь место <номер места> - освобождает место по требованию
