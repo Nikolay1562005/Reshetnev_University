@@ -1,0 +1,2 @@
+0.751096
+Time taken by function: 2332073 microseconds

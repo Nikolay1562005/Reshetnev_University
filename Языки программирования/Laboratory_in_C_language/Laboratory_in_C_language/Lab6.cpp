@@ -7,56 +7,10 @@ void Lab6() {
 	char name[100], str[100];
 
 	puts("Введите Ваше имя : "); gets_s(name, 100);
-	printf("Введите Ваш возраст : ");
-	scanf("%i", &age);
+	printf("Введите Ваш возраст : \n");
+	scanf_s("%i", &age);
 	sprintf_s(str, "Здраствуйте %s. Ваш возраст %i лет", name, age);
-	sprintf_s(str, "%s");
-	//int x = 5, y, * px = &x;
-
-	//y = *px + 2;
-	//printf("y = %i значение указателя = %i\n", y, px);
-
-	//y = *px++;
-	//printf("y = %i значение указателя = %i\n", y, px);
-
-	//px = &x;
-	//y = (*px)++;
-	//printf("y = %i значение указателя = %i. Значение, адресуемое указателем *px = %i\n", y, px, *px);
-
-	//y = ++ * px;
-	//printf("y = %i значение указателя = %i\n", y, px);
-	//----------
-	//int rows = 2;
-	//int cols = 5;
-
-	//int** rooms;
-
-	//// создание указателей
-	//rooms = new int *[rows];
-	//for (int i = 0; i < rows; i++) { 
-	//	rooms[i] = new int[cols]; 
-	//}
-
-	//// инициализация указателей
-	//for (int i = 0; i < rows; i++) {
-	//	for (int j = 0; j < cols; j++) {
-	//		rooms[i][j] = rand()%100;
-	//	}
-	//}
-
-	//for (int i = 0; i < rows; i++) {
-	//	for (int j = 0; j < cols; j++) {
-	//		printf("%i ", rooms[i][j]);
-	//	}
-	//	puts("");
-	//}
-
-	//// уничтожение
-	//for (int i = 0; i < rows; i++) {
-	//	delete[] rooms [i];
-	//}
-
-	//delete[] rooms;
+	puts(str);
 }
 
 
